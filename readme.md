@@ -53,3 +53,72 @@ Welcome to the **Java Cheatsheet**! 🚀 This is a **comprehensive, one-stop ref
 - [2️⃣8️⃣ Trends in Computing and Ethical Issues](#trends-in-computing-and-ethical-issues)
 
 ---
+
+### 1️⃣ Introduction to Object-Oriented Programming (OOP)  
+
+- Java is an **object-oriented** programming language.  
+- OOP is based on **objects** (real-world entities) and **classes** (blueprints for objects).  
+- Four key principles of OOP:  
+
+  | Principle      | Meaning |
+  |--------------|---------|
+  | **Encapsulation** | Wrapping data and methods together to protect information. |
+  | **Inheritance** | One class can inherit properties from another. |
+  | **Polymorphism** | Methods can behave differently based on the object calling them. |
+  | **Abstraction** | Hides unnecessary details and shows only essential features. |
+
+**Example:**  
+```java
+class Car {
+    String color;
+    void startEngine() {
+        System.out.println("Engine started.");
+    }
+}
+```
+
+---
+
+### 2️⃣ Introduction to Java  
+
+- Java is **platform-independent** (Write Once, Run Anywhere).  
+- **Compiling a Java program:**  
+
+  ```java
+  // Source Code (Hello.java)
+  class Hello {
+      public static void main(String[] args) {
+          System.out.println("Hello, Java!");
+      }
+  }
+  ```
+
+  - `javac Hello.java` → Compiles the program.  
+  - `java Hello` → Runs the compiled program.  
+
+---
+
+### 3️⃣ Objects and Classes  
+
+- **Class**: A blueprint that defines attributes and methods.  
+- **Object**: An instance of a class with actual values.  
+
+**Example:**  
+```java
+class Car {
+    String color;
+    void startEngine() {
+        System.out.println("Engine started.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.color = "Red";
+        myCar.startEngine(); // Output: Engine started.
+    }
+}
+```
+
+---
