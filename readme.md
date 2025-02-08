@@ -321,6 +321,172 @@ for (int num : numbers) {
       System.out.println(i); // Output: 1 2 4 5
   }
   ```
+---
+## 🔵 Intermediate (Class 10)  
+
+### 🔟 Class as the Basis of All Computation  
+
+- **A class is a blueprint** for creating objects in Java.  
+- It contains **fields (variables)** and **methods (functions)**.  
+
+#### **Example of a Class and Object**  
+```java
+class Car {
+    String model = "Tesla"; // Instance variable
+
+    void displayModel() { // Method
+        System.out.println("Car Model: " + model);
+    }
+
+    public static void main(String[] args) {
+        Car myCar = new Car(); // Object creation
+        myCar.displayModel();  // Calling the method
+    }
+}
+```
+
+---
+
+### 1️⃣1️⃣ User-Defined Methods  
+
+- **Methods** allow us to break a program into smaller, reusable parts.  
+- There are **two types** of methods:  
+  - **Methods that return a value**  
+  - **Methods that do not return a value**  
+
+#### **Method Without Return Type**  
+```java
+public class Main {
+    static void greet() {
+        System.out.println("Hello, Java!");
+    }
+
+    public static void main(String[] args) {
+        greet(); // Calling the method
+    }
+}
+```
+
+#### **Method With Return Type**  
+```java
+public class Main {
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        int sum = add(5, 10);
+        System.out.println("Sum: " + sum);
+    }
+}
+```
+
+---
+### 1️⃣2️⃣ Constructors  
+
+- A **constructor** is a special method that initializes objects.  
+- It has **the same name as the class** and **no return type**.  
+
+#### **Types of Constructors**  
+| Constructor Type   | Description |
+|-------------------|-------------|
+| **Default Constructor** | No parameters, assigns default values. |
+| **Parameterized Constructor** | Takes arguments to initialize values. |
+
+#### **Example: Default Constructor**  
+```java
+public class Car {
+    Car() { // Constructor
+        System.out.println("Car object created!");
+    }
+
+    public static void main(String[] args) {
+        Car myCar = new Car(); // Calls the constructor
+    }
+}
+```
+
+#### **Example: Parameterized Constructor**  
+```java
+public class Car {
+    String model;
+
+    // Constructor with parameter
+    Car(String carModel) {
+        model = carModel;
+    }
+
+    public static void main(String[] args) {
+        Car myCar = new Car("Tesla");
+        System.out.println("Car Model: " + myCar.model);
+    }
+}
+```
+
+---
+
+### 1️⃣3️⃣ Library Classes  
+
+- Java provides **built-in classes** for various functionalities.  
+- Common library classes:  
+  - **Math** (mathematical operations)  
+  - **String** (string manipulations)  
+  - **Scanner** (user input handling)  
+
+#### **Using Math Library**  
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Math.sqrt(25));  // 5.0
+        System.out.println(Math.pow(2, 3)); // 8.0
+    }
+}
+```
+
+#### **Using Scanner Library**  
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+        System.out.println("Hello, " + name);
+        sc.close();
+    }
+}
+```
+
+---
+
+### 1️⃣4️⃣ Encapsulation  
+
+- **Encapsulation** is the practice of **hiding data** within a class and controlling access through methods.  
+- We use **private variables** and **public getter/setter methods**.  
+
+#### **Example of Encapsulation**  
+```java
+public class Person {
+    private String name; // Private variable
+
+    // Setter method
+    public void setName(String newName) {
+        name = newName;
+    }
+
+    // Getter method
+    public String getName() {
+        return name;
+    }
+
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.setName("Alice");
+        System.out.println("Name: " + p.getName());
+    }
+}
+```
 
 ---
 
@@ -353,4 +519,43 @@ for (int num : numbers) {
 }
 ```
 
+
 ---
+
+### 1️⃣6️⃣ String Handling  
+
+- **Strings** are sequences of characters stored in **String objects**.  
+- Strings are **immutable**, meaning they cannot be changed after creation.  
+
+#### **Declaring Strings**  
+```java
+String s1 = "Hello";
+String s2 = new String("Java");
+```
+
+#### **Common String Methods**  
+| Method | Description |
+|--------|------------|
+| `length()` | Returns string length |
+| `charAt(index)` | Returns character at index |
+| `substring(start, end)` | Extracts substring |
+| `toUpperCase()` | Converts to uppercase |
+| `toLowerCase()` | Converts to lowercase |
+| `concat(str)` | Joins two strings |
+
+#### **Example: String Methods**  
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello, Java";
+        System.out.println(str.length());       // 11
+        System.out.println(str.charAt(1));      // e
+        System.out.println(str.substring(0, 5)); // Hello
+        System.out.println(str.toUpperCase());  // HELLO, JAVA
+    }
+}
+```
+
+---
+
+[🔼 Back to Top](#java-fundamentals-cheatsheet) | [🔷 Next: Advanced](#advanced-class-11)  
