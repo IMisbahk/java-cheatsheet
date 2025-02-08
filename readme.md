@@ -557,5 +557,254 @@ public class Main {
 ```
 
 ---
+## 🔴 Advanced (Class 11)  
 
-[🔼 Back to Top](#java-fundamentals-cheatsheet) | [🔷 Next: Advanced](#advanced-class-11)  
+### 1️⃣7️⃣ Introduction to Algorithmic Problem Solving Using Java  
+
+- **Algorithmic problem solving** is the process of **breaking down problems** into smaller, manageable steps and solving them systematically.  
+- It involves:  
+  - **Problem Analysis** → Understanding the requirements.  
+  - **Designing an Algorithm** → Writing step-by-step logic.  
+  - **Implementation** → Converting it into Java code.  
+
+#### **Example: Finding the Largest Number (Algorithm & Code)**  
+**Algorithm:**  
+1. Take three numbers as input.  
+2. Compare them using conditional statements.  
+3. Print the largest number.  
+
+```java
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter three numbers: ");
+        int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();
+
+        int largest = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
+        System.out.println("Largest Number: " + largest);
+
+        sc.close();
+    }
+}
+```
+
+---
+
+### 1️⃣8️⃣ Objects  
+
+- **Objects** are instances of classes that store **state (variables)** and **behavior (methods)**.  
+- Objects are created using the **new** keyword.  
+
+#### **Example: Object Creation**  
+```java
+public class Dog {
+    String breed;
+
+    Dog(String b) {
+        breed = b;
+    }
+
+    void bark() {
+        System.out.println(breed + " is barking!");
+    }
+
+    public static void main(String[] args) {
+        Dog d = new Dog("Labrador");
+        d.bark();
+    }
+}
+```
+
+---
+
+### 1️⃣9️⃣ Primitive Values, Wrapper Classes, Types, and Casting  
+
+#### **Primitive vs Wrapper Classes**  
+| Primitive Type | Wrapper Class | Example |
+|---------------|--------------|---------|
+| `int`  | `Integer` | `Integer x = 10;` |
+| `double`  | `Double` | `Double y = 5.5;` |
+| `char`  | `Character` | `Character c = 'A';` |
+| `boolean` | `Boolean` | `Boolean flag = true;` |
+
+#### **Type Casting**  
+| Type | Description |
+|------|------------|
+| **Implicit Casting (Widening)** | Small → Large (e.g., `int → double`) |
+| **Explicit Casting (Narrowing)** | Large → Small (e.g., `double → int`) |
+
+#### **Example: Type Casting**  
+```java
+public class Casting {
+    public static void main(String[] args) {
+        int a = 5;
+        double b = a; // Implicit casting (int to double)
+        System.out.println(b);
+
+        double x = 9.7;
+        int y = (int) x; // Explicit casting (double to int)
+        System.out.println(y);
+    }
+}
+```
+
+---
+
+### 2️⃣0️⃣ Variables and Expressions  
+
+- **Expressions** combine **variables, constants, and operators** to produce a value.  
+- **Types of Expressions:**
+  - **Arithmetic Expressions** → `x + y - z`
+  - **Relational Expressions** → `a > b`
+  - **Logical Expressions** → `x && y`  
+
+#### **Example: Expression Evaluation**  
+```java
+public class Expressions {
+    public static void main(String[] args) {
+        int x = 5, y = 10;
+        int result = (x + y) * 2;
+        System.out.println("Result: " + result);
+    }
+}
+```
+
+---
+
+### 2️⃣1️⃣ Statements and Scope  
+
+- **Scope** defines where a variable can be accessed.  
+- **Types of Scope:**  
+  - **Local Scope** → Inside methods or blocks.  
+  - **Instance Scope** → Defined in a class but outside methods.  
+  - **Static Scope** → Shared across all instances of a class.  
+
+#### **Example: Variable Scope**  
+```java
+public class ScopeExample {
+    int instanceVar = 100; // Instance variable
+
+    public void method() {
+        int localVar = 50; // Local variable
+        System.out.println(localVar);
+    }
+
+    public static void main(String[] args) {
+        ScopeExample obj = new ScopeExample();
+        obj.method();
+        System.out.println(obj.instanceVar);
+    }
+}
+```
+
+---
+
+### 2️⃣2️⃣ Methods and Constructors  
+
+✅ **Already Covered in Intermediate Section**  
+
+---
+
+### 2️⃣3️⃣ Arrays and Strings  
+
+✅ **Arrays (Covered in Intermediate)**  
+
+✅ **Strings (Covered in Intermediate)**  
+
+---
+
+### 2️⃣4️⃣ Basic Input/Output and Data File Handling  
+
+#### **Reading & Writing Files**  
+```java
+import java.io.*;
+
+public class FileHandling {
+    public static void main(String[] args) throws IOException {
+        // Writing to a file
+        FileWriter writer = new FileWriter("output.txt");
+        writer.write("Hello, File!");
+        writer.close();
+
+        // Reading from a file
+        BufferedReader reader = new BufferedReader(new FileReader("output.txt"));
+        System.out.println(reader.readLine());
+        reader.close();
+    }
+}
+```
+
+---
+
+### 2️⃣5️⃣ Recursion  
+
+- **Recursion** is a technique where a method **calls itself** until a base condition is met.  
+
+#### **Example: Factorial using Recursion**  
+```java
+public class Factorial {
+    static int fact(int n) {
+        return (n == 0) ? 1 : n * fact(n - 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fact(5)); // Output: 120
+    }
+}
+```
+
+---
+
+### 2️⃣6️⃣ Implementation of Algorithms to Solve Problems  
+
+✅ **Covered in Algorithmic Problem Solving**  
+
+---
+
+### 2️⃣7️⃣ Packages  
+
+- A **package** is a collection of related **classes and interfaces**.  
+- Used to **organize** Java programs.  
+
+#### **Creating and Using a Package**  
+1. Create a package:  
+```java
+package mypackage;
+
+public class Hello {
+    public void greet() {
+        System.out.println("Hello from package!");
+    }
+}
+```
+2. Use the package in another file:  
+```java
+import mypackage.Hello;
+
+public class Main {
+    public static void main(String[] args) {
+        Hello obj = new Hello();
+        obj.greet();
+    }
+}
+```
+
+---
+
+### 2️⃣8️⃣ Trends in Computing and Ethical Issues  
+
+- **Trends in Computing:**
+  - Cloud Computing  
+  - Artificial Intelligence  
+  - Cybersecurity  
+  - Quantum Computing  
+
+- **Ethical Issues in Computing:**
+  - **Data Privacy** (Protecting user data)  
+  - **Cybersecurity** (Preventing cyber threats)  
+  - **Intellectual Property** (Respecting copyrights)  
+  - **Digital Divide** (Bridging technology gaps)  
+
+---
