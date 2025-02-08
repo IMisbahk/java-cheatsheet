@@ -23,7 +23,7 @@ Welcome to the **Java Cheatsheet**! 🚀 This is a **comprehensive, one-stop ref
 - [2️⃣ Introduction to Java](#introduction-to-java)
 - [3️⃣ Elementary Concepts of Objects and Classes](#elementary-concepts-of-objects-and-classes)
 - [4️⃣ Values and Data Types](#values-and-data-types)
-- [5️⃣ Operators in Java](#operators-in-java)
+- [5️⃣ Operators in Java](#Operators-in-java)
 - [6️⃣ Input in Java](#input-in-java)
 - [7️⃣ Conditional Constructs in Java](#conditional-constructs-in-java)
 - [8️⃣ Iterative Constructs in Java](#iterative-constructs-in-java)
