@@ -122,3 +122,55 @@ public class Main {
 ```
 
 ---
+
+### 4️⃣ Values and Data Types  
+
+- Java has different **data types** to store different kinds of values.  
+- Data types are categorized into **primitive** and **non-primitive**.  
+
+#### **Primitive Data Types**  
+
+| Data Type  | Size      | Example |
+|------------|----------|---------|
+| `byte`     | 1 byte   | `byte b = 100;` |
+| `short`    | 2 bytes  | `short s = 32000;` |
+| `int`      | 4 bytes  | `int num = 10;` |
+| `long`     | 8 bytes  | `long bigNum = 100000L;` |
+| `float`    | 4 bytes  | `float pi = 3.14f;` |
+| `double`   | 8 bytes  | `double precise = 3.14159;` |
+| `char`     | 2 bytes  | `char letter = 'A';` |
+| `boolean`  | 1 bit    | `boolean isJavaFun = true;` |
+
+#### **Non-Primitive Data Types**  
+- Strings, Arrays, Classes, and Interfaces are non-primitive types.  
+- Example:  
+  ```java
+  String message = "Hello, Java!";
+  ```
+
+---
+
+### 5️⃣ Operators in Java  
+
+- Operators perform operations on variables and values.  
+- Java has different categories of operators:  
+
+| Operator Type      | Uses |
+|--------------------|-----------------------------|
+| **Arithmetic**     | `+`, `-`, `*`, `/`, `%`  |
+| **Relational**     | `==`, `!=`, `>`, `<`, `>=`, `<=` |
+| **Logical**        | `&&`, `||`, `!` |
+| **Bitwise**        | `&`, `|`, `^`, `~`, `<<`, `>>` |
+| **Assignment**     | `=`, `+=`, `-=`, `*=`, `/=`, `%=` |
+| **Unary**          | `+`, `-`, `++`, `--` |
+| **Ternary**        | `condition ? trueValue : falseValue` |
+
+**Example:**  
+```java
+int a = 10, b = 5;
+System.out.println(a + b); // Output: 15
+System.out.println(a > b); // Output: true
+System.out.println(a == 10 && b < 10); // Output: true
+```
+
+---
