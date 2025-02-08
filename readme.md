@@ -174,3 +174,183 @@ System.out.println(a == 10 && b < 10); // Output: true
 ```
 
 ---
+### 6️⃣ Input and Output in Java  
+
+- Java provides the `Scanner` class for user input.  
+- `System.out.println()` is used to display output.  
+
+#### **Taking Input Using Scanner**  
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();  // Takes string input
+        
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();  // Takes integer input
+        
+        System.out.println("Hello, " + name + "! You are " + age + " years old.");
+    }
+}
+```
+
+#### **Printing Output**
+```java
+System.out.println("Hello, Java!"); // Prints with a new line
+System.out.print("Hello, "); // Prints without a new line
+System.out.printf("Pi value: %.2f", 3.14159); // Formatted output
+```
+
+---
+
+### 7️⃣ Control Flow Statements  
+
+Java provides control statements to **change the flow of execution**.  
+
+#### **Conditional Statements**  
+
+- **If Statement**  
+  ```java
+  if (condition) {
+      // Code executes if condition is true
+  }
+  ```
+
+- **If-Else Statement**  
+  ```java
+  if (condition) {
+      // Code executes if condition is true
+  } else {
+      // Code executes if condition is false
+  }
+  ```
+
+- **Else-If Ladder**  
+  ```java
+  if (condition1) {
+      // Executes if condition1 is true
+  } else if (condition2) {
+      // Executes if condition2 is true
+  } else {
+      // Executes if none of the conditions are true
+  }
+  ```
+
+- **Switch Statement**  
+  ```java
+  int day = 3;
+  switch (day) {
+      case 1:
+          System.out.println("Monday");
+          break;
+      case 2:
+          System.out.println("Tuesday");
+          break;
+      default:
+          System.out.println("Other day");
+  }
+  ```
+
+---
+
+### 8️⃣ Looping Statements  
+
+Loops help in **executing a block of code multiple times**.  
+
+#### **While Loop**  
+Executes while the condition is **true**.  
+```java
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
+
+#### **Do-While Loop**  
+Executes at least **once**, then checks the condition.  
+```java
+int i = 1;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+```
+
+#### **For Loop**  
+Used when the number of iterations is **fixed**.  
+```java
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+
+#### **For-Each Loop**  
+Used to **iterate over arrays or collections**.  
+```java
+int[] numbers = {1, 2, 3, 4, 5};
+for (int num : numbers) {
+    System.out.println(num);
+}
+```
+
+---
+
+### 9️⃣ Jump Statements  
+
+- **Break Statement** → Exits the loop immediately.  
+  ```java
+  for (int i = 1; i <= 5; i++) {
+      if (i == 3) {
+          break;
+      }
+      System.out.println(i); // Output: 1 2
+  }
+  ```
+
+- **Continue Statement** → Skips the current iteration and proceeds to the next.  
+  ```java
+  for (int i = 1; i <= 5; i++) {
+      if (i == 3) {
+          continue;
+      }
+      System.out.println(i); // Output: 1 2 4 5
+  }
+  ```
+
+---
+
+### 🔟 Arrays in Java  
+
+- An **array** is a collection of elements of the **same data type**.  
+- Java arrays have **fixed size** once declared.  
+
+#### **Declaring and Initializing an Array**  
+```java
+int[] numbers = {10, 20, 30, 40, 50};
+String[] names = new String[3]; // Empty array of size 3
+names[0] = "Alice"; // Assigning values
+```
+
+#### **Accessing and Modifying Array Elements**  
+```java
+System.out.println(numbers[0]); // Output: 10
+numbers[2] = 99; // Modifying an element
+```
+
+#### **Looping Through an Array**  
+```java
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println(numbers[i]); // Using a for loop
+}
+
+for (int num : numbers) {
+    System.out.println(num); // Using a for-each loop
+}
+```
+
+---
